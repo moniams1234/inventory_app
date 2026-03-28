@@ -88,13 +88,13 @@ html, body, [class*="css"] {
 
 /* Sekcje */
 .section-header {
-    background: linear-gradient(90deg, #E8650A 0%, #FAD7B8 100%);
+     background: linear-gradient(90deg, #0B3D91 0%, #1E5AA8 100%);
     padding: 0.5rem 1rem;
     border-radius: 6px;
     margin: 1rem 0 0.8rem 0;
     font-weight: 600;
-    color: #1a1a1a;
-    font-size: 0.95rem;
+    color: white;
+    font-size: 1.05rem;
 }
 
 /* Badge aktywnego mappingu */

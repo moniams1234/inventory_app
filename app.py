@@ -61,122 +61,160 @@ st.markdown(
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Główny styl */
+/* Global */
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    background-color: #F5F7FA;
+    color: #1F2937;
+}
+
+/* Główny kontener */
+.block-container {
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
 /* Nagłówek główny */
 .main-header {
-    background: linear-gradient(135deg, #404040 0%, #1a1a1a 100%);
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #1F3A5F 0%, #2E4D73 100%);
+    padding: 1.7rem 2rem;
+    border-radius: 14px;
     margin-bottom: 1.5rem;
-    border-left: 6px solid #E8650A;
+    border-left: 6px solid #4A90E2;
+    box-shadow: 0 8px 24px rgba(31, 58, 95, 0.18);
 }
 .main-header h1 {
     color: #FFFFFF;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
+    letter-spacing: -0.02em;
 }
 .main-header p {
-    color: #AAAAAA;
-    font-size: 0.9rem;
-    margin: 0.3rem 0 0 0;
+    color: #D9E2F0;
+    font-size: 1rem;
+    margin: 0.45rem 0 0 0;
+    line-height: 1.5;
 }
 
 /* Sekcje */
 .section-header {
-     background: linear-gradient(90deg, #0B3D91 0%, #1E5AA8 100%);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    margin: 1rem 0 0.8rem 0;
+    background: linear-gradient(90deg, #1F3A5F 0%, #2E5C9A 100%);
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    margin: 1.2rem 0 0.9rem 0;
     font-weight: 600;
-    color: white;
-    font-size: 1.05rem;
+    color: #FFFFFF;
+    font-size: 1.08rem;
+    box-shadow: 0 3px 10px rgba(31, 58, 95, 0.12);
 }
 
 /* Badge aktywnego mappingu */
 .badge-default {
-    background: #E8650A;
+    background: #1F3A5F;
     color: white;
-    padding: 0.25rem 0.8rem;
+    padding: 0.32rem 0.85rem;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 600;
     display: inline-block;
+    box-shadow: 0 2px 8px rgba(31, 58, 95, 0.18);
 }
 .badge-user {
-    background: #404040;
+    background: #2E5C9A;
     color: white;
-    padding: 0.25rem 0.8rem;
+    padding: 0.32rem 0.85rem;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 600;
     display: inline-block;
+    box-shadow: 0 2px 8px rgba(46, 92, 154, 0.18);
 }
 
 /* Instrukcja */
 .instruction-box {
-    background: #FFF8F3;
-    border: 1px solid #FAD7B8;
-    border-radius: 8px;
+    background: #F4F7FB;
+    border: 1px solid #D6E0F0;
+    border-radius: 10px;
     padding: 1rem 1.2rem;
     margin-bottom: 1rem;
-    font-size: 0.88rem;
-    color: #404040;
+    font-size: 0.94rem;
+    color: #334155;
+    line-height: 1.6;
 }
 .instruction-box ol {
-    margin: 0.5rem 0 0 1rem;
+    margin: 0.6rem 0 0 1.1rem;
     padding: 0;
 }
 .instruction-box li {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.35rem;
+}
+.instruction-box code {
+    background: #EAF0F8;
+    color: #1F3A5F;
+    padding: 0.12rem 0.35rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
 }
 
 /* Metryki */
 div[data-testid="stMetric"] {
-    background: #F8F8F8;
-    border: 1px solid #E0E0E0;
-    border-radius: 8px;
-    padding: 0.6rem 1rem;
-    border-top: 3px solid #E8650A;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    border-top: 4px solid #1F3A5F;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+div[data-testid="stMetricLabel"] {
+    color: #475569;
+    font-weight: 600;
+}
+div[data-testid="stMetricValue"] {
+    color: #0F172A;
+    font-weight: 700;
 }
 
 /* Przyciski */
 .stButton > button {
-    background: linear-gradient(135deg, #E8650A, #C45508);
+    background: linear-gradient(135deg, #1F3A5F, #2E4D73);
     color: white;
     font-weight: 600;
     border: none;
-    border-radius: 8px;
-    padding: 0.6rem 2rem;
+    border-radius: 10px;
+    padding: 0.68rem 2rem;
     font-size: 1rem;
-    transition: all 0.2s;
-    box-shadow: 0 2px 8px rgba(232,101,10,0.3);
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(31, 58, 95, 0.22);
 }
 .stButton > button:hover {
-    background: linear-gradient(135deg, #C45508, #A34406);
-    box-shadow: 0 4px 12px rgba(232,101,10,0.4);
+    background: linear-gradient(135deg, #27486E, #3A5D88);
+    box-shadow: 0 6px 14px rgba(31, 58, 95, 0.28);
     transform: translateY(-1px);
 }
 
-/* Pobieranie */
+/* Przyciski pobierania */
 .stDownloadButton > button {
-    background: #404040;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: 500;
+    background: #FFFFFF;
+    color: #1F3A5F;
+    border: 1px solid #C7D3E3;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.62rem 1.2rem;
 }
 .stDownloadButton > button:hover {
-    background: #606060;
+    background: #F3F7FC;
+    border-color: #AFC2DD;
+    color: #18314F;
 }
 
-/* Separator */
+/* Separatory */
 hr {
-    border-top: 2px solid #FAD7B8;
+    border-top: 1px solid #D9E2EC;
     margin: 1.5rem 0;
 }
 
@@ -190,14 +228,135 @@ header {visibility: hidden;}
     gap: 8px;
 }
 .stTabs [data-baseweb="tab"] {
-    border-radius: 6px 6px 0 0;
-    font-weight: 500;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    background: #EEF3F8;
+    color: #334155;
+    padding: 0.5rem 1rem;
 }
+.stTabs [aria-selected="true"] {
+    background: #1F3A5F !important;
+    color: #FFFFFF !important;
+}
+
+/* Pola input / upload / radio jako karty */
+.stDateInput > div,
+.stFileUploader,
+div[role="radiogroup"] {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+/* Upload box */
+[data-testid="stFileUploader"] {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+[data-testid="stFileUploaderDropzone"] {
+    background: #F8FAFC;
+    border: 2px dashed #C7D3E3;
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: #4A90E2;
+    background: #F1F6FD;
+}
+
+/* Label i teksty formularzy */
+label, .stDateInput label, .stFileUploader label, .stRadio label {
+    color: #111827 !important;
+    font-size: 1.02rem !important;
+    font-weight: 600 !important;
+}
+
+/* Teksty pomocnicze */
+small, .stCaption, .stMarkdown p {
+    color: #475569;
+}
+
+/* Inputy */
+.stTextInput input,
+.stDateInput input,
+textarea {
+    border-radius: 10px !important;
+    border: 1px solid #CBD5E1 !important;
+}
+.stTextInput input:focus,
+.stDateInput input:focus,
+textarea:focus {
+    border-color: #4A90E2 !important;
+    box-shadow: 0 0 0 1px #4A90E2 !important;
+}
+
+/* Radio przyciski */
+div[role="radiogroup"] label {
+    padding: 0.15rem 0;
+}
+
+/* Alerty */
+.stAlert {
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+}
+[data-testid="stAlertContainer"] {
+    border-radius: 12px;
+}
+.stAlert-success {
+    background-color: #EAF7EE;
+    border-left: 5px solid #2E7D32;
+}
+.stAlert-error {
+    background-color: #FDEDED;
+    border-left: 5px solid #C62828;
+}
+.stAlert-warning {
+    background-color: #FFF8E1;
+    border-left: 5px solid #ED6C02;
+}
+.stAlert-info {
+    background-color: #EAF2FD;
+    border-left: 5px solid #1F3A5F;
+}
+
+/* Tabele / dataframe */
+[data-testid="stDataFrame"] {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+/* Expander */
+details {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0.2rem 0.5rem;
+}
+details summary {
+    font-weight: 600;
+    color: #1F3A5F;
+}
+
+/* Sidebar jeśli kiedyś włączysz */
+section[data-testid="stSidebar"] {
+    background: #F8FAFC;
+}
+
+/* Drobne poprawki marginesów */
+.element-container {
+    margin-bottom: 0.35rem;
+}
+
 </style>
 """,
     unsafe_allow_html=True,
 )
-
 # ---------------------------------------------------------------------------
 # Nagłówek
 # ---------------------------------------------------------------------------

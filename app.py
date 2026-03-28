@@ -9,6 +9,30 @@ from datetime import date, datetime
 import pandas as pd
 import streamlit as st
 
+# ---------------- LOGIN ----------------
+def login():
+    if "logged" not in st.session_state:
+        st.session_state.logged = False
+
+    if not st.session_state.logged:
+        st.markdown("## 🔐 Dostęp do aplikacji")
+
+        password = st.text_input("Podaj hasło:", type="password")
+
+        if password:
+            if password == st.secrets["APP_PASSWORD"]:
+                st.session_state.logged = True
+                st.success("Zalogowano")
+                st.rerun()
+            else:
+                st.error("Nieprawidłowe hasło")
+
+        st.stop()
+
+login()
+# ---------------------------------------
+
+
 from export import df_to_csv_bytes, export_to_excel, summary_to_csv_bytes
 from processing import DEFAULT_MAPPING_PATH, process_data
 from utils import (

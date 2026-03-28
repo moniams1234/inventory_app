@@ -352,7 +352,67 @@ section[data-testid="stSidebar"] {
 .element-container {
     margin-bottom: 0.35rem;
 }
+/* =========================
+   COMPACT LAYOUT (NOWY)
+========================= */
 
+.block-container {
+    padding-top: 0.8rem !important;
+    padding-bottom: 1.2rem !important;
+}
+
+.section-header {
+    padding: 0.45rem 0.8rem !important;
+    font-size: 0.95rem !important;
+    margin: 0.8rem 0 0.5rem 0 !important;
+}
+
+.stDateInput > div,
+.stFileUploader,
+div[role="radiogroup"] {
+    padding: 0.6rem 0.8rem !important;
+    border-radius: 10px !important;
+}
+
+[data-testid="stFileUploaderDropzone"] {
+    padding: 0.8rem !important;
+}
+
+label {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
+.stTextInput input,
+.stDateInput input {
+    padding: 0.35rem 0.6rem !important;
+    font-size: 0.95rem !important;
+}
+
+div[role="radiogroup"] label {
+    margin-bottom: 0.2rem !important;
+}
+
+.stButton > button {
+    padding: 0.45rem 1.5rem !important;
+    font-size: 0.95rem !important;
+}
+
+div[data-testid="stMetric"] {
+    padding: 0.5rem 0.8rem !important;
+}
+
+details {
+    padding: 0.2rem 0.4rem !important;
+}
+
+[data-testid="stDataFrame"] {
+    font-size: 0.9rem !important;
+}
+
+.element-container {
+    margin-bottom: 0.2rem !important;
+}
 </style>
 """,
     unsafe_allow_html=True,
